@@ -29,11 +29,20 @@
   opacity: 0.6;
   position: relative !important;
   z-index: 123 !important;
+  transition: all 0.8s ease;
 }
 .name.active {
   opacity: 1;
   cursor: pointer;
   -webkit-text-fill-color: white;
+}
+.name.active span {
+  font-size: 18px;
+  line-height: 130%;
+  -webkit-text-fill-color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
 }
 .name span {
   font-size: 18px;
@@ -42,6 +51,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
+  margin-top: 11px;
+  margin-left: 12px;
 }
 
 .container {
@@ -106,7 +117,6 @@
 .swiper-slide-active .names {
   transform: translateY(0);
 }
-
 .swiper-slide-next .bg {
   transform: translateY(-50vh);
 }
@@ -147,6 +157,9 @@
 .slider-name .swiper-slide, .slider-name-color .swiper-slide {
   align-items: flex-start;
 }
+.slider-name .swiper-slide-active .name, .slider-name-color .swiper-slide-active .name {
+  font-size: 54px;
+}
 
 .slider-name-color {
   padding-top: 50px;
@@ -156,6 +169,10 @@
 .slider-name-color .name {
   opacity: 1;
   -webkit-text-fill-color: white;
+}
+.slider-name-color .swiper-slide-active .name {
+  letter-spacing: 0.14em;
+  -webkit-text-stroke: 0px white;
 }
 
 .name-wraper {

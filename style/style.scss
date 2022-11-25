@@ -29,10 +29,20 @@
     opacity:  .6;
     position: relative !important;
     z-index: 123 !important;
+    transition: all .8s ease;
     &.active {
         opacity: 1;
         cursor: pointer;
         -webkit-text-fill-color: white;
+        & span {
+            font-size: 18px;
+            line-height: 130%;
+            -webkit-text-fill-color: white;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            
+        }
     }
     & span {
         font-size: 18px;
@@ -41,6 +51,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
+        margin-top: 11px;
+        margin-left: 12px;
         
     }
 }
@@ -108,6 +120,9 @@
     & .names {
         transform: translateY(0);
     }
+    & .name {
+
+    }
 }
 
 .swiper-slide-next {
@@ -154,6 +169,11 @@
     & .swiper-slide {
         align-items: flex-start;
     }
+    & .swiper-slide-active {
+        & .name {
+            font-size: 54px;
+        }
+    }
 }
 
 .slider-name-color {
@@ -163,6 +183,12 @@
     & .name {
         opacity: 1;
         -webkit-text-fill-color: white;
+    }
+    & .swiper-slide-active {
+        & .name {
+            letter-spacing: 0.14em;
+    -webkit-text-stroke: 0px white;
+        }
     }
 }
 
