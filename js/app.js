@@ -9,7 +9,7 @@ const swiper1 = new Swiper('.slider-name', {
     speed: 800,
     centeredSlides: true,
     slidesPerView: 3,
-    spaceBetween: 150,
+    spaceBetween: 120,
     allowTouchMove: false,
 });
 const swiper2 = new Swiper('.slider-name-color', {
@@ -21,7 +21,7 @@ const swiper2 = new Swiper('.slider-name-color', {
     speed: 800,
     centeredSlides: true,
     slidesPerView: 1,
-    spaceBetween: 150,
+    spaceBetween: 120,
     allowTouchMove: false,
 });
 
