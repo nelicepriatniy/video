@@ -3,7 +3,7 @@
     src: url(./../meida/font/benzin-extrabold.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
 
 * {
     margin: 0;
@@ -37,6 +37,10 @@
     & span {
         font-size: 18px;
         line-height: 130%;
+        -webkit-text-fill-color: white;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
         
     }
 }
@@ -124,6 +128,14 @@
 }
 
 
+.containerSlides {
+    position: absolute;
+    top: 59px;
+    width: 100%;
+    height: calc(100vh - 59px);
+}
+
+
 .slider-name, .slider-name-color {
     position: absolute !important;
     top: 0;
@@ -188,13 +200,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 36px 0;
+    padding-top: 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 2;
     & .container {
         flex-direction: row;
+        align-items: center;
         justify-content: flex-start;
     }
     & ul {
@@ -203,7 +216,7 @@ header {
     & li {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 135%;
         letter-spacing: -0.02em;
