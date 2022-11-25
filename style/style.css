@@ -42,7 +42,9 @@
   -webkit-text-fill-color: white;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
+  transition: all 0.8s ease;
+  letter-spacing: -0.02em;
 }
 .name span {
   font-size: 18px;
@@ -50,9 +52,10 @@
   -webkit-text-fill-color: white;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 11px;
   margin-left: 12px;
+  letter-spacing: -0.02em;
 }
 
 .container {
@@ -159,6 +162,10 @@
 }
 .slider-name .swiper-slide-active .name, .slider-name-color .swiper-slide-active .name {
   font-size: 54px;
+}
+.slider-name .swiper-slide-active .name span, .slider-name-color .swiper-slide-active .name span {
+  font-size: 21px;
+  letter-spacing: -0.02em;
 }
 
 .slider-name-color {
