@@ -16,10 +16,10 @@
   font-family: "Benzin-ExtraBold";
   font-size: 44px;
   line-height: 140%;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -178,7 +178,6 @@
   -webkit-text-fill-color: white;
 }
 .slider-name-color .swiper-slide-active .name {
-  letter-spacing: 0.14em;
   -webkit-text-stroke: 0px white;
 }
 
