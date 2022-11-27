@@ -273,12 +273,10 @@ header li:last-child {
 
 .grid-container__wrapper {
   margin-bottom: 3px;
-  height: 449px;
   width: 100%;
   grid-gap: 3px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 .grid-container__wrapper:nth-child(odd) .project:nth-child(1) {
   grid-column: span 2;
@@ -432,5 +430,11 @@ header li:last-child {
   }
   .slider-name-color {
     transform: translateY(-65%);
+  }
+  .grid-container__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-container__wrapper .project:nth-child(n) {
+    grid-row: span 2;
   }
 }/*# sourceMappingURL=style.css.map */

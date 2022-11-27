@@ -298,12 +298,10 @@ header {
 
 .grid-container__wrapper {
     margin-bottom: 3px;
-    height: 449px;
     width: 100%;
     grid-gap: 3px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     &:nth-child(odd) {
         & .project {
             &:nth-child(1) {
@@ -484,5 +482,14 @@ header {
     }
     .slider-name-color {
         transform: translateY(-65%);
+    }
+
+    .grid-container__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        & .project {
+            &:nth-child(n) {
+                grid-row: span 2;
+            }
+        }
     }
 }

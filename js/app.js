@@ -10,7 +10,6 @@ const swiper1 = new Swiper('.slider-name', {
     centeredSlides: true,
     slidesPerView: 3,
     spaceBetween: 120,
-    allowTouchMove: false,
 });
 const swiper2 = new Swiper('.slider-name-color', {
     // Optional parameters
@@ -22,7 +21,6 @@ const swiper2 = new Swiper('.slider-name-color', {
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 120,
-    allowTouchMove: false,
 });
 
 const swiper = new Swiper('.slider1', {
@@ -32,7 +30,6 @@ const swiper = new Swiper('.slider1', {
         eventsTarget: 'body',
       },
     speed: 800,
-    allowTouchMove: false,
 });
 
 function dohref (){
