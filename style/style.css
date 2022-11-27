@@ -12,6 +12,18 @@
   list-style: none;
 }
 
+.cen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: black;
+}
+
 .name {
   font-family: "Benzin-ExtraBold";
   font-size: 44px;
@@ -255,12 +267,58 @@ header li:last-child {
   opacity: 0;
 }
 
+.mob {
+  display: none;
+}
+
+.grid-container__wrapper {
+  margin-bottom: 3px;
+  height: 449px;
+  width: 100%;
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid-container__wrapper:nth-child(odd) .project:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.grid-container__wrapper:nth-child(even) .project:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.nameS h1 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 54px;
+  line-height: 140%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 96px;
+  margin-top: 108px;
+}
+
+.project {
+  overflow: hidden;
+}
+.project img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 1000px) {
   .container {
     width: 940px;
   }
   header .container {
     justify-content: space-between;
+  }
+  .logo {
+    margin: 0;
   }
   .bg {
     left: 50%;
@@ -272,5 +330,107 @@ header li:last-child {
   }
   .swiper-slide-next .bg {
     transform: translate(-50%, -150vh);
+  }
+  .grid-container__wrapper {
+    height: 279px;
+  }
+}
+@media (max-width: 640px) {
+  .notMob {
+    display: none !important;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .mob {
+    display: block;
+  }
+  .container {
+    width: 90%;
+  }
+  .logo {
+    height: 18px;
+    margin: 0;
+    z-index: 102;
+  }
+  .mob__menu {
+    height: 7px;
+    width: 40px;
+    position: relative;
+    transition: all 0.4s ease;
+    z-index: 102;
+  }
+  .mob__menu::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+  }
+  .mob__menu::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    transition: all 0.4s ease;
+  }
+  .mob__menu.active::after {
+    transform: rotate(45deg);
+  }
+  .mob__menu.active::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .header__henu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.8s ease;
+    transform: translateY(-100vh);
+    background: black;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__henu.active {
+    transform: translateX(0vh);
+  }
+  .header__henu li {
+    font-family: "Benzin-ExtraBold";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .header__henu li:last-child {
+    margin-bottom: 0;
+  }
+  header {
+    z-index: 99;
+    overflow: hidden;
+  }
+  .name {
+    font-size: 22px;
+  }
+  .slider-name .swiper-slide-active .name, .slider-name-color .swiper-slide-active .name {
+    font-size: 29px;
+  }
+  .slider-name-color {
+    transform: translateY(-65%);
   }
 }/*# sourceMappingURL=style.css.map */
