@@ -6,7 +6,7 @@ const swiper1 = new Swiper('.slider-name', {
     mousewheel: {
         eventsTarget: 'body',
       },
-      touchEventsTarget: 'body',
+      touchEventsTarget: 'container',
     speed: 800,
     centeredSlides: true,
     slidesPerView: 3,
@@ -19,7 +19,7 @@ const swiper2 = new Swiper('.slider-name-color', {
     mousewheel: {
         eventsTarget: 'body',
       },
-      touchEventsTarget: 'body',
+      touchEventsTarget: 'container',
     speed: 800,
     centeredSlides: true,
     slidesPerView: 1,
@@ -33,7 +33,7 @@ const swiper = new Swiper('.slider1', {
     mousewheel: {
         eventsTarget: 'body',
       },
-      touchEventsTarget: 'body',
+      touchEventsTarget: 'container',
     speed: 800,
     simulateTouch: false,
 });
