@@ -6,10 +6,12 @@ const swiper1 = new Swiper('.slider-name', {
     mousewheel: {
         eventsTarget: 'body',
       },
+      touchEventsTarget: 'body',
     speed: 800,
     centeredSlides: true,
     slidesPerView: 3,
     spaceBetween: 120,
+    simulateTouch: false,
 });
 const swiper2 = new Swiper('.slider-name-color', {
     // Optional parameters
@@ -17,10 +19,12 @@ const swiper2 = new Swiper('.slider-name-color', {
     mousewheel: {
         eventsTarget: 'body',
       },
+      touchEventsTarget: 'body',
     speed: 800,
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 120,
+    simulateTouch: false,
 });
 
 const swiper = new Swiper('.slider1', {
@@ -29,7 +33,18 @@ const swiper = new Swiper('.slider1', {
     mousewheel: {
         eventsTarget: 'body',
       },
+      touchEventsTarget: 'body',
     speed: 800,
+    simulateTouch: false,
+});
+
+
+const topSwiper = new Swiper('.topSwiper', {
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  speed: 800,
 });
 
 function dohref (){
