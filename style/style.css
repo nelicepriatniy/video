@@ -514,4 +514,7 @@ li.active a {
   .grid-container__wrapper {
     grid-template-columns: 1fr;
   }
+  .slider-name-color {
+    transform: translateY(-68%);
+  }
 }/*# sourceMappingURL=style.css.map */

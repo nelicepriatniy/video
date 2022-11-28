@@ -11,7 +11,7 @@ const swiper1 = new Swiper('.slider-name', {
     centeredSlides: true,
     slidesPerView: 3,
     spaceBetween: 120,
-    simulateTouch: false,
+    swipeHandler: 'body'
 });
 const swiper2 = new Swiper('.slider-name-color', {
     // Optional parameters
@@ -24,7 +24,7 @@ const swiper2 = new Swiper('.slider-name-color', {
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 120,
-    simulateTouch: false,
+    swipeHandler: 'body'
 });
 
 const swiper = new Swiper('.slider1', {
@@ -35,7 +35,21 @@ const swiper = new Swiper('.slider1', {
       },
       touchEventsTarget: 'container',
     speed: 800,
-    simulateTouch: false,
+    swipeHandler: 'body'
+});
+
+let slideIndexx = 1;
+
+swiper.on('slideChangeTransitionStart', function () {
+  let slidesIndex = document.querySelectorAll('.bg-slide');
+  slidesIndex.forEach((el, i, arr)=>{
+    if (el.classList.contains('swiper-slide-active')){
+      slideIndexx = i ;
+      console.log(i);
+    }
+  })
+  swiper2.slideTo(slideIndexx);
+  swiper1.slideTo(slideIndexx);
 });
 
 
