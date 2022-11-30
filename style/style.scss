@@ -73,7 +73,7 @@ body {
 }
 
 .container {
-    width: 1480px;
+    width: calc(100vw - 120px);
     height: 100%;
 }
 
@@ -158,8 +158,9 @@ body {
 .containerSlides {
     position: absolute;
     top: 59px;
-    width: 100%;
     height: calc(100vh - 59px);
+    width: calc(100vw - 120px) ;
+    margin: 0 60px;
 }
 
 
@@ -168,7 +169,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 50px;
     box-sizing: border-box;
     max-width: 1480px;
@@ -195,6 +196,7 @@ body {
 .slider-name-color {
     padding-top: 50px;
     height: 73px;
+    margin: 0;
     transform: translateY(-69%);
     & .name {
         opacity: 1;
@@ -382,12 +384,13 @@ li {
 
 
 .topSwiper {
-    margin-bottom: 5px;
+    height: 83vh;
+    margin-bottom: 3px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1599px) {
     .container {
-        width: 940px;
+        width: calc(100vw - 120px);
     }
     header {
         & .container {
@@ -399,7 +402,7 @@ li {
     }
     .bg {
         left: 50%;
-        transform: translate(-50%, 50vh);
+        transform: translate(-50%, 50%);
         top: 50%;
     }
     .swiper-slide-active .bg {
@@ -407,12 +410,12 @@ li {
 
     }
     .swiper-slide-next .bg {
-        transform: translate(-50%, -150vh);
+        transform: translate(-50%, -50%);
 
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 999px) {
     .containerSlides {
         width: 90%;
         margin-left: 5%;
@@ -483,6 +486,7 @@ li {
         z-index: 10;
         width: 100vw;
         height: 100vh;
+        opacity: .9;
         &.active {
             transform: translateX(00vh);
             
@@ -519,7 +523,7 @@ li {
         font-size: 29px;
     }
     .slider-name-color {
-        transform: translateY(-65%);
+        transform: translateY(-69%);
     }
 
     .grid-container__wrapper {
@@ -549,7 +553,6 @@ li {
         }
     }
     .topSwiper {
-        height: 100vh;
         & .swiper-slide {
             & img {
 
@@ -558,7 +561,7 @@ li {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 639px) {
     .grid-container__wrapper{
         grid-template-columns: 1fr;
     }
