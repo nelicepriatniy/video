@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header>
+      <div class="container">
+        <a href="./index.html">
+          <div class="logo">
+            <img src="./meida/logo.svg" alt="">
+          </div>
+        </a>
+        <div class="mob mob__menu"></div>
+        <div class="notMob header__henu">
+          <ul>
+            <li><a href="./grid.html">Проекты</a></li>
+            <li class="active"><a href="./trailers.html">Трейлеры </a></li>
+            <li><a href="">Промо </a></li>
+            <li><a href="">Графика </a></li>
+            <li><a href="">Клипы </a></li>
+          </ul>
+          <div class="blockAnim"></div>
+        </div>
+      </div>
+    </header>
+    <div class="header__henu mobileMenu mob">
+      <ul>
+        <li><a href="./grid.html">Проекты</a></li>
+        <li class="active"><a href="./trailers.html">Трейлеры </a></li>
+        <li><a href="">Промо </a></li>
+        <li><a href="">Графика </a></li>
+        <li><a href="">Клипы </a></li>
+      </ul>
+    </div>
+  <main>
+    <div class="video cen">
+        
+    <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    data-setup="{}"
+    muted
+  >
+    <source src="./meida/video/over.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+    </div>
+  </main>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

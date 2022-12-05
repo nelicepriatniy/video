@@ -1,5 +1,3 @@
-
-
 const swiper1 = new Swiper('.slider-name', {
     // Optional parameters
     direction: 'vertical',
@@ -37,6 +35,9 @@ const swiper = new Swiper('.slider1', {
     speed: 800,
     swipeHandler: 'body'
 });
+
+
+
 
 let slideIndexx = 1;
 
