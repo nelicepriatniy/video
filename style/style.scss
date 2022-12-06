@@ -757,11 +757,19 @@ main {
 }
 
 .video-js .vjs-play-control {
+    background: #44444481;
     position: absolute;
     bottom: 0;
     height: 100vh;
     width: 100vw;
 
+}
+
+.vjs-play-control {
+    &.vjs-playing {
+        background: none;
+
+    }
 }
 
 .video-js .vjs-volume-level {
