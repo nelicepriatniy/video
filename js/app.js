@@ -1,3 +1,6 @@
+
+//слайдер с не закрашенными названиями в главной
+
 const swiper1 = new Swiper('.slider-name', {
     // Optional parameters
     direction: 'vertical',
@@ -11,6 +14,9 @@ const swiper1 = new Swiper('.slider-name', {
     spaceBetween: 120,
     swipeHandler: 'body'
 });
+
+//слайдер с закрашенными названиями в главной
+
 const swiper2 = new Swiper('.slider-name-color', {
     // Optional parameters
     direction: 'vertical',
@@ -25,6 +31,8 @@ const swiper2 = new Swiper('.slider-name-color', {
     swipeHandler: 'body'
 });
 
+//слайдер главной страницы с картинками
+
 const swiper = new Swiper('.slider1', {
     // Optional parameters
     direction: 'vertical',
@@ -37,7 +45,7 @@ const swiper = new Swiper('.slider1', {
 });
 
 
-
+//изменение закрашиваемого слайдера при изменении не закрашиваемого
 
 let slideIndexx = 1;
 
@@ -53,6 +61,7 @@ swiper.on('slideChangeTransitionStart', function () {
   swiper1.slideTo(slideIndexx);
 });
 
+//слайдер сверху страницы проекты
 
 const topSwiper = new Swiper('.topSwiper', {
   autoplay: {
@@ -62,9 +71,7 @@ const topSwiper = new Swiper('.topSwiper', {
   speed: 800,
 });
 
-function dohref (){
-    let hreffrom = document.querySelectorAll('.namehref');
-}
+//появление мобильного меню
 
 let mobileMenuBtn = document.querySelector('.mob__menu');
 let mobileMenu = document.querySelector('.mobileMenu');
@@ -72,3 +79,18 @@ mobileMenuBtn.addEventListener('click', ()=>{
   mobileMenuBtn.classList.toggle('active');
   mobileMenu.classList.toggle('active');
 })
+
+
+//появление хедера
+
+let header = document.querySelector('header');
+header.classList.add('active')
+let last_scroll = 0;
+window.onscroll = function(){
+  if(window.scrollY > last_scroll){
+    header.classList.remove('active')
+  }else{
+    header.classList.add('active')
+  }
+  last_scroll = window.scrollY;
+}
