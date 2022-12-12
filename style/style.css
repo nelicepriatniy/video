@@ -743,6 +743,73 @@ main {
   color: #D9FF42;
 }
 
+.video-js .vjs-progress-control {
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+}
+
+.video-js .vjs-picture-in-picture-control {
+  display: none;
+}
+
+.videoslider {
+  height: auto;
+}
+
+.video-js .vjs-volume-panel {
+  position: absolute;
+  bottom: 35px;
+  right: 30px;
+}
+
+.video-js .vjs-fullscreen-control {
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+}
+
+.videoslider .swiper-slide-active {
+  position: relative;
+}
+.videoslider .swiper-slide-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  border: 1px #D9FF42 solid;
+  top: -1%;
+  left: -1%;
+}
+
+.videoWraper {
+  padding: 66px 0;
+}
+
+.videobg {
+  height: 125px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: white !important;
+}
+
+.vjs-has-started .vjs-control-bar, .vjs-audio-only-mode .vjs-control-bar {
+  background: none;
+}
+
+.closeBtn {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  cursor: pointer;
+}
+
 @media (max-width: 1599px) {
   .container {
     width: calc(100vw - 120px);
@@ -762,13 +829,20 @@ main {
     transform: translate(-50%, -50%);
   }
   .swiper-slide-next .bg {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -150%);
   }
   .project__item {
     height: 279px;
   }
+  .videobg {
+    height: 77px;
+  }
 }
 @media (max-width: 999px) {
+  .bg {
+    scale: 1;
+    height: 100%;
+  }
   .containerSlides {
     width: 90%;
     margin-left: 5%;
@@ -860,9 +934,15 @@ main {
     width: 300vh;
     height: 300vh;
   }
+  .header__henu.active ul {
+    opacity: 1;
+  }
   .header__henu ul {
     position: relative;
+    transition: opacity 0.9s ease;
+    transition-delay: 0.7s;
     z-index: 3;
+    opacity: 0;
   }
   .header__henu li {
     font-family: "Benzin-ExtraBold";
@@ -893,7 +973,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
   .grid-container__wrapper .project {
-    height: 178px;
+    height: 56.25vw;
   }
   .grid-container__wrapper .project:first-child {
     grid-column: span 1;
@@ -924,6 +1004,9 @@ main {
   footer a {
     margin-right: 35px;
   }
+  .videobg {
+    height: 68px;
+  }
 }
 @media (max-width: 639px) {
   .grid-container__wrapper {
@@ -934,5 +1017,14 @@ main {
   }
   .progectGrid {
     grid-template-columns: 1fr;
+  }
+  .videobg {
+    height: 63px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    font-size: 12px;
+  }
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    font-size: 27px !important;
   }
 }/*# sourceMappingURL=style.css.map */

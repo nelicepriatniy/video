@@ -12,57 +12,99 @@
 </head>
 
 <body>
-    <header class="active">
-      <div class="container">
-        <a href="./index.html">
-          <div class="logo">
-            <img src="./meida/logo.svg" alt="">
-          </div>
-        </a>
-        <div class="mob mob__menu"></div>
-        <div class="notMob header__henu">
-          <ul>
-            <li><a href="./grid.html">Проекты</a></li>
-            <li class="active"><a href="./trailers.html">Трейлеры </a></li>
-            <li><a href="">Промо </a></li>
-            <li><a href="">Графика </a></li>
-            <li><a href="">Клипы </a></li>
-          </ul>
-          <div class="blockAnim"></div>
+  <header class="active">
+    <div class="container">
+      <a href="./index.html">
+        <div class="logo">
+          <img src="./meida/logo.svg" alt="">
         </div>
+      </a>
+      <div class="mob mob__menu"></div>
+      <div class="notMob header__henu">
+        <ul>
+          <li><a href="./grid.html">Проекты</a></li>
+          <li class="active"><a href="./trailers.html">Трейлеры </a></li>
+          <li><a href="">Промо </a></li>
+          <li><a href="">Графика </a></li>
+          <li><a href="">Клипы </a></li>
+        </ul>
+        <div class="blockAnim"></div>
       </div>
-    </header>
-    <div class="header__henu mobileMenu mob">
-      <ul>
-        <li><a href="./grid.html">Проекты</a></li>
-        <li class="active"><a href="./trailers.html">Трейлеры </a></li>
-        <li><a href="">Промо </a></li>
-        <li><a href="">Графика </a></li>
-        <li><a href="">Клипы </a></li>
-      </ul>
     </div>
+  </header>
+  <div class="header__henu mobileMenu mob">
+    <ul>
+      <li><a href="./grid.html">Проекты</a></li>
+      <li class="active"><a href="./trailers.html">Трейлеры </a></li>
+      <li><a href="">Промо </a></li>
+      <li><a href="">Графика </a></li>
+      <li><a href="">Клипы </a></li>
+    </ul>
+  </div>
   <main>
     <div class="video cen">
-        
-    <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    data-setup="{}"
-    muted
-  >
-    <source src="./meida/video/over.mp4" type="video/mp4" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
+
+      <video id="my-video" class="video-js" controls preload="auto" data-setup="{}" muted>
+        <source src="./meida/video/over.mp4" type="video/mp4" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+    </div>
+    <div class="closeBtn">
+      <a href="./project.html">
+        <img src="./meida/video/pleer/close.svg" alt="">
+      </a>
     </div>
   </main>
+  <div class="videoWraper">
+    <div class="swiper videoslider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg1.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg3.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg2.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg1.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg3.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg2.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg1.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg3.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg2.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg1.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg3.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+        <div class="swiper-slide bg-slide">
+          <img src="./meida/bg2.png" alt="задний фон первого слайда" class="videobg">
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>

@@ -36,12 +36,45 @@ const swiper2 = new Swiper('.slider-name-color', {
 const swiper = new Swiper('.slider1', {
     // Optional parameters
     direction: 'vertical',
+    touchStartForcePreventDefault: true,
     mousewheel: {
         eventsTarget: 'body',
       },
       touchEventsTarget: 'container',
     speed: 800,
     swipeHandler: 'body'
+});
+
+//слайдер в видео с другими проектами
+
+const videoslider = new Swiper('.videoslider', {
+  // Optional parameters
+  direction: 'horizontal',
+  speed: 400,
+  swipeHandler: 'body',
+  slidesPerView: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  spaceBetween: 3,
+  centeredSlides: true,
+  loop: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 9,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 6,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 9,
+    }
+  }
 });
 
 
