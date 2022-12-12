@@ -196,9 +196,9 @@ body {
 
 .slider-name-color {
     padding-top: 50px;
-    height: 73px;
+    height: 110px;
     margin: 0;
-    transform: translateY(-69%);
+    transform: translateY(-46%);
     & .name {
         opacity: 1;
         -webkit-text-fill-color: white;
@@ -912,8 +912,8 @@ main {
         height: 100%;
     }
     .containerSlides {
-        width: 90%;
-        margin-left: 5%;
+        width: 98%;
+        margin-left: 1%;
     }
     .notMob {
         display: none !important;
@@ -1033,10 +1033,10 @@ main {
     }
 
     .name {
-        font-size: 22px;
+        font-size: 29px;
     }
     .slider-name .swiper-slide-active .name, .slider-name-color .swiper-slide-active .name {
-        font-size: 29px;
+        font-size: 37px;
     }
     .slider-name-color {
         transform: translateY(-69%);
@@ -1098,7 +1098,7 @@ main {
         grid-template-columns: 1fr;
     }
     .slider-name-color {
-        transform: translateY(-68%);
+        transform: translateY(-46%);
     }
     .progectGrid {
         grid-template-columns: 1fr;

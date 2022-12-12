@@ -12,7 +12,21 @@ const swiper1 = new Swiper('.slider-name', {
     centeredSlides: true,
     slidesPerView: 3,
     spaceBetween: 120,
-    swipeHandler: 'body'
+    swipeHandler: 'body',
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 114,
+      },
+      // when window width is >= 480px
+      480: {
+        spaceBetween: 120,
+      },
+      // when window width is >= 640px
+      640: {
+        spaceBetween: 120,
+      }
+    }
 });
 
 //слайдер с закрашенными названиями в главной
@@ -28,7 +42,21 @@ const swiper2 = new Swiper('.slider-name-color', {
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 120,
-    swipeHandler: 'body'
+    swipeHandler: 'body',
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 114,
+      },
+      // when window width is >= 480px
+      480: {
+        spaceBetween: 120,
+      },
+      // when window width is >= 640px
+      640: {
+        spaceBetween: 120,
+      }
+    }
 });
 
 //слайдер главной страницы с картинками
