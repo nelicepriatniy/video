@@ -873,6 +873,10 @@ main {
   .awards__flex {
     margin-bottom: 121px;
   }
+  .videoslider .thisVideo::after {
+    height: 87px;
+    width: 149px;
+  }
 }
 @media (max-width: 999px) {
   .bg {
@@ -937,7 +941,7 @@ main {
     transform: rotate(-45deg);
   }
   .header__henu {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     transition: all 0.8s ease;
@@ -1089,6 +1093,10 @@ main {
   .item__name {
     font-size: 17px;
   }
+  .videoslider .thisVideo::after {
+    height: 80px;
+    width: 130px;
+  }
 }
 @media (max-width: 639px) {
   .container {
@@ -1141,5 +1149,9 @@ main {
   }
   .awards__flex__item:first-child {
     top: 36px;
+  }
+  .videoslider .thisVideo::after {
+    height: 72px;
+    width: 122px;
   }
 }/*# sourceMappingURL=style.css.map */
