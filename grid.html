@@ -47,13 +47,18 @@
           проекты</h1>
         <div class="work">
           <h3>Что входит в работу:</h3>
-          <ul>
-            <li>Разработка</li>
-            <li>Видео</li>
-            <li>Ещё видео</li>
-            <li>Разработка</li>
-            <li>И опять разработка</li>
-          </ul>
+          <p class="list">
+            Разработка промо-кампаний <br>
+            Копирайтинг <br>
+            Трейлеры <br>
+            Тизеры <br>
+            Фьючеретки <br>
+            Съемочное промо <br>
+            Супервайзинг имеющихся пакетов <br>
+            Цветокоррекция <br>
+            Сведение звука 5.1, 2.0 <br>
+            DCP
+          </p>
         </div>
       </div>
     </div>
@@ -516,7 +521,7 @@
       <div class="next cen">
         <div class="container">
           <div class="btnNextBlock">
-            <img src="./meida/plus.svg" alt="" class="plus">
+            <div class="plus"></div>
             <p>Показать ещё</p>
           </div>
         </div>
@@ -543,12 +548,18 @@
     let nextBtn = document.querySelector('.btnNextBlock');
     let projextBlock = document.querySelectorAll('.grid-container__wrapper');
     let activeProjectIndex = 2;
-    nextBtn.onclick = ()=>{
+    
+    function showNext () {
       projextBlock.forEach(()=>{
         projextBlock[activeProjectIndex].classList.add('active');
         projextBlock[activeProjectIndex + 1].classList.add('active');
       })
       activeProjectIndex = activeProjectIndex + 2;
+      nextBtn.classList.remove('active')
+      }
+    nextBtn.onclick = ()=>{
+      nextBtn.classList.add('active')
+      setTimeout(showNext, 300);
     };</script>
 </body>
 

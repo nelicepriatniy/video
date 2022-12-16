@@ -65,6 +65,7 @@ const swiper = new Swiper('.slider1', {
     // Optional parameters
     direction: 'vertical',
     touchStartForcePreventDefault: true,
+    delay: 2000,
     mousewheel: {
         eventsTarget: 'body',
       },
@@ -152,4 +153,12 @@ window.onscroll = function(){
     header.classList.add('active')
   }
   last_scroll = window.scrollY;
+  if(window.scrollY > 10) {
+    header.classList.add('bgTrue')
+  } else {
+    header.classList.remove('bgTrue')
+
+  }
 }
+
+
