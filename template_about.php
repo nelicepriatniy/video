@@ -1,47 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-</head>
+<?php 
+/*
+* Template name: О нас
+*/
+get_header();
+?>
 
-<body>
-    <header>
-      <div class="container">
-        <a href="./index.html">
-          <div class="logo">
-            <img src="./meida/logo.svg" alt="">
-          </div>
-        </a>
-        <div class="mob mob__menu"></div>
-        <div class="notMob header__henu">
-          <ul>
-            <li><a href="./grid.html">Проекты</a></li>
-            <li><a href="./trailers.html">Трейлеры </a></li>
-            <li><a href="">Промо </a></li>
-            <li><a href="">Графика </a></li>
-            <li><a href="">Клипы </a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <div class="header__henu mobileMenu mob">
-      <ul>
-        <li><a href="./grid.html">Проекты</a></li>
-        <li><a href="./trailers.html">Трейлеры </a></li>
-        <li><a href="">Промо </a></li>
-        <li><a href="">Графика </a></li>
-        <li><a href="">Клипы </a></li>
-      </ul>
-      <div class="blockAnim"></div>
-    </div>
-  <main>
+<main>
     <div class="aboutTop cen">
         <div class="container">
             <h1 class="nameab">Многие годы наша команда занимается продвижением лидеров российского кинорынка</h1>
@@ -193,20 +158,6 @@
         </div>
     </div>
   </main>
-  <footer class="cen">
-    <div class="container">
-      <a class="notMob">О нас</a>
-      <div class="footer__right">
-        <a>+7 (926) 192 8444</a>
-        <a>Malito:info@insightmoscow.com</a>
-      </div>
-    </div>
-  </footer>
 
-
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/app.js"></script>
-</body>
-
-</html>
+<?php
+get_footer(); ?>

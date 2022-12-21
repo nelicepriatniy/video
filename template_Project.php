@@ -1,64 +1,30 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php 
+/*
+* Template name: страница проектов
+*/
+get_header();
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-</head>
 
-<body>
-  <header class="headerh">
-    <div class="container">
-      <a href="./index.html">
-        <div class="logo">
-          <img src="./meida/logo.svg" alt="">
-        </div>
-      </a>
-      <div class="mob mob__menu"></div>
-      <div class="notMob header__henu">
-        <ul>
-          <li class="active"><a href="./grid.html">Проекты</a></li>
-          <li><a href="./trailers.html">Трейлеры </a></li>
-          <li><a href="">Промо </a></li>
-          <li><a href="">Графика </a></li>
-          <li><a href="">Клипы </a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <div class="header__henu mobileMenu mob">
-    <ul>
-      <li class="active"><a href="./grid.html">Проекты</a></li>
-      <li><a href="./trailers.html">Трейлеры </a></li>
-      <li><a href="">Промо </a></li>
-      <li><a href="">Графика </a></li>
-      <li><a href="">Клипы </a></li>
-    </ul>
-    <div class="blockAnim"></div>
-  </div>
-  <main>
+<main>
     <div class="topText cen">
       <div class="container">
         <h1>
           проекты</h1>
         <div class="work">
           <h3>Что входит в работу:</h3>
-          <ul>
-            <li>Разработка промо-кампаний</li>
-            <li>Копирайтинг</li>
-            <li>Трейлеры</li>
-            <li>Тизеры</li>
-            <li>Фьючеретки</li>
-            <li>Съемочное промо</li>
-            <li>Супервайзинг имеющихся пакетов</li>
-            <li>Цветокоррекция</li>
-            <li>Сведение звука 5.1, 2.0</li>
-            <li>DCP</li>
-          </ul>
+          <p class="list">
+            Разработка промо-кампаний <br>
+            Копирайтинг <br>
+            Трейлеры <br>
+            Тизеры <br>
+            Фьючеретки <br>
+            Съемочное промо <br>
+            Супервайзинг имеющихся пакетов <br>
+            Цветокоррекция <br>
+            Сведение звука 5.1, 2.0 <br>
+            DCP
+          </p>
         </div>
       </div>
     </div>
@@ -528,21 +494,12 @@
       </div>
     </div>
   </main>
-  <footer class="cen">
-    <div class="container">
-      <a href="./about.html" class="notMob">О нас</a>
-      <div class="footer__right">
-        <a>+7 (926) 192 8444</a>
-        <a>Malito:info@insightmoscow.com</a>
-      </div>
-    </div>
-  </footer>
 
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/app.js"></script>
+<?php
+get_footer(); ?>
 
-  <script>
+
+<script>
     //появление 20 новых проектов
     
     let nextBtn = document.querySelector('.btnNextBlock');

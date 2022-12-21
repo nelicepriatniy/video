@@ -82,6 +82,7 @@ const videoslider = new Swiper('.videoslider', {
   speed: 400,
   swipeHandler: 'body',
   slidesPerView: "auto",
+  spaceBetween: 3,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -129,6 +130,7 @@ const topSwiper = new Swiper('.topSwiper', {
   },
   loop: true,
   speed: 800,
+  effect: 'fade',
 });
 
 //появление мобильного меню

@@ -1,3 +1,11 @@
+
+<?php 
+/*
+* Template name: главная
+*/
+get_header();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -37,7 +45,6 @@
       <li><a href="">Промо </a></li>
       <li><a href="">Графика </a></li>
       <li><a href="">Клипы </a></li>
-      <li><a href="">О нас </a></li>
     </ul>
     <div class="blockAnim"></div>
   </div>
