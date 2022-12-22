@@ -624,9 +624,18 @@ footer {
         color: #444444;
         margin-bottom: 36px;
         margin-right: 59px;
+        transition: all .4s ease;
+        &:hover {
+            cursor: pointer;
+            color: #D9FF42;
+        }
 
         &:last-child {
             margin-right: 0;
+        }
+        &.active {
+            color: #D9FF42;
+
         }
     }
 }
@@ -728,7 +737,7 @@ main {
     line-height: 130%;
     letter-spacing: -0.02em;
     margin-bottom: 93px;
-    width: 932px;
+    width: 880px;
 
 }
 
@@ -1076,7 +1085,7 @@ $remsize:  calc(100vw / 1600px * 10);
 
     }
     & img {
-        height: 110px;
+        height: 144px;
     }
 }
 
@@ -1205,6 +1214,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .container {
+        margin-left: 10px;
         width: calc(100vw - 40px);
     }
 
