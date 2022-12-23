@@ -421,6 +421,9 @@ li {
 
         & .nameprod {
             opacity: 1;
+            & a {
+                width: 100%;
+            }
         }
     }
 
@@ -444,6 +447,11 @@ li {
             text-align: center;
             letter-spacing: -0.02em;
             text-transform: capitalize;
+            margin-bottom: 7px;
+            width: 0%;
+            transition: all .4s ease;
+            transition-delay: .1s;
+            overflow: hidden;
 
             &:last-child {
                 font-weight: 500;
@@ -452,6 +460,9 @@ li {
                 text-align: center;
                 text-transform: capitalize;
                 letter-spacing: -0.02em;
+                margin-bottom: 0;
+                transition: all .5s ease;
+                transition-delay: .4s;
 
             }
         }
@@ -494,7 +505,7 @@ li {
         font-size: 26px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        margin-bottom: 13px;
+        margin-bottom: 19px;
     }
 
     & li {
@@ -518,7 +529,7 @@ li {
 
 
 .topSwiper {
-    height: 90vh;
+    height: 95vh;
     margin-bottom: 3px;
 }
 
@@ -802,7 +813,8 @@ main {
 }
 
 .awards__flex {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     position: relative;
     height: 50px;
     width: 100%;
@@ -813,8 +825,6 @@ main {
 }
 
 .awards__flex__item {
-    position: absolute;
-    left: 654px;
 
     & p {
         font-family: 'Montserrat';
@@ -1089,7 +1099,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1400px) {
 
     .container {
         width: calc(100vw - 120px);
@@ -1130,6 +1140,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .awards__flex__item {
+        position: absolute;
         left: 489px;
     }
 
@@ -1476,7 +1487,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .aboutDeals__flex {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     
@@ -1526,6 +1537,9 @@ $remsize:  calc(100vw / 1600px * 10);
 }
 
 @media (max-width: 639px) {
+    .aboutDeals__flex {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     .container {
         width: calc(100vw - 20px);

@@ -368,6 +368,9 @@ li.active a {
 .project:hover .nameprod {
   opacity: 1;
 }
+.project:hover .nameprod a {
+  width: 100%;
+}
 .project .nameprod {
   position: absolute;
   top: 50%;
@@ -388,6 +391,11 @@ li.active a {
   text-align: center;
   letter-spacing: -0.02em;
   text-transform: capitalize;
+  margin-bottom: 7px;
+  width: 0%;
+  transition: all 0.4s ease;
+  transition-delay: 0.1s;
+  overflow: hidden;
 }
 .project .nameprod a:last-child {
   font-weight: 500;
@@ -396,6 +404,9 @@ li.active a {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: -0.02em;
+  margin-bottom: 0;
+  transition: all 0.5s ease;
+  transition-delay: 0.4s;
 }
 .project .product__hover {
   transition: all 0.4s ease;
@@ -432,7 +443,7 @@ li.active a {
   font-size: 26px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  margin-bottom: 13px;
+  margin-bottom: 19px;
 }
 .topText li {
   font-family: "Montserrat";
@@ -452,7 +463,7 @@ li.active a {
 }
 
 .topSwiper {
-  height: 90vh;
+  height: 95vh;
   margin-bottom: 3px;
 }
 
@@ -727,7 +738,8 @@ main {
 }
 
 .awards__flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
   height: 50px;
   width: 100%;
@@ -736,10 +748,6 @@ main {
   margin-bottom: 55px;
 }
 
-.awards__flex__item {
-  position: absolute;
-  left: 654px;
-}
 .awards__flex__item p {
   font-family: "Montserrat";
   font-style: normal;
@@ -975,7 +983,7 @@ main {
   height: 144px;
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1400px) {
   .container {
     width: calc(100vw - 120px);
   }
@@ -1003,6 +1011,7 @@ main {
     height: 77px;
   }
   .awards__flex__item {
+    position: absolute;
     left: 489px;
   }
   .awards__flex__item:last-child {
@@ -1266,7 +1275,7 @@ main {
     width: 130px;
   }
   .aboutDeals__flex {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .clients__wraper__item {
     width: 33.33%;
@@ -1303,6 +1312,9 @@ main {
   }
 }
 @media (max-width: 639px) {
+  .aboutDeals__flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .container {
     width: calc(100vw - 20px);
   }
