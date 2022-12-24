@@ -143,24 +143,4 @@ mobileMenuBtn.addEventListener('click', ()=>{
 })
 
 
-//появление хедера
-
-let header = document.querySelector('header');
-header.classList.add('active')
-let last_scroll = 0;
-window.onscroll = function(){
-  if(window.scrollY > last_scroll){
-    header.classList.remove('active')
-  }else{
-    header.classList.add('active')
-  }
-  last_scroll = window.scrollY;
-  if(window.scrollY > 10) {
-    header.classList.add('bgTrue')
-  } else {
-    header.classList.remove('bgTrue')
-
-  }
-}
-
 

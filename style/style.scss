@@ -288,7 +288,7 @@ header {
     transform: translateY(-100%);
 
     &.bgTrue {
-        background: black;
+        background: #050505;
 
     }
 
@@ -730,6 +730,10 @@ main {
     overflow-x: hidden;
 }
 
+.aboutDeals  {
+    margin-bottom: 145px;
+}
+
 .nameab {
 
     font-family: 'Benzin-ExtraBold';
@@ -737,7 +741,7 @@ main {
     line-height: 140%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 74px;
+    margin-bottom: 86px;
 }
 
 .descab {
@@ -809,18 +813,17 @@ main {
 }
 
 .aboutAwards {
-    margin-bottom: 107px;
+    margin-bottom: 201px;
 }
 
 .awards__flex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
-    height: 50px;
     width: 100%;
     border-top: 1px solid #333333;
-    padding-top: 32px;
-    margin-bottom: 55px;
+    padding-top: 24px;
+    margin-bottom: 52px;
 
 }
 
@@ -831,7 +834,6 @@ main {
         font-style: normal;
         font-weight: 500;
         font-size: 17px;
-        line-height: 135%;
         letter-spacing: -0.02em;
         position: relative;
     }
@@ -1354,7 +1356,6 @@ $remsize:  calc(100vw / 1600px * 10);
 
     .name {
         font-size: 29px;
-        width: 297px;
     }
 
     .slider-name .swiper-slide-active .name,
@@ -1384,18 +1385,29 @@ $remsize:  calc(100vw / 1600px * 10);
         }
     }
 
+    .grid-container__wrapper.active {
+        max-height: 3000px;
+    }
+
+    .name span {
+        margin-top: 0;
+        margin-left: 19px;
+    }
+
     .topText {
 
         & h1 {
-            font-size: 29px;
+            font-size: 37px;
+            margin-bottom: 23px;
         }
 
         & h3 {
-            font-size: 17px;
+            font-size: 22px;
+            margin-bottom: 7px;
         }
 
         & li {
-            font-size: 13px;
+            font-size: 17px;
         }
     }
 

@@ -203,6 +203,30 @@
     </div>
   </footer>
 
+  <script>
+    
+//появление хедера
+
+let header = document.querySelector('header');
+header.classList.add('active')
+let last_scroll = 0;
+window.onscroll = function(){
+  if(window.scrollY > last_scroll){
+    header.classList.remove('active')
+  }else{
+    header.classList.add('active')
+  }
+  last_scroll = window.scrollY;
+  if(window.scrollY > 10) {
+    header.classList.add('bgTrue')
+  } else {
+    header.classList.remove('bgTrue')
+
+  }
+}
+
+  </script>
+
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>

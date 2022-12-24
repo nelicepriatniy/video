@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="headerh">
+  <header class="active">
     <div class="container">
       <a href="./index.html">
         <div class="logo">
@@ -21,7 +21,7 @@
       <div class="mob mob__menu"></div>
       <div class="notMob header__henu">
         <ul>
-          <li class="active"><a href="./grid.html">Проекты</a></li>
+          <li><a href="./grid.html">Проекты</a></li>
           <li><a href="./trailers.html">Трейлеры </a></li>
           <li><a href="">Промо </a></li>
           <li><a href="">Графика </a></li>
@@ -32,11 +32,12 @@
   </header>
   <div class="header__henu mobileMenu mob">
     <ul>
-      <li class="active"><a href="./grid.html">Проекты</a></li>
+      <li><a href="./grid.html">Проекты</a></li>
       <li><a href="./trailers.html">Трейлеры </a></li>
       <li><a href="">Промо </a></li>
       <li><a href="">Графика </a></li>
       <li><a href="">Клипы </a></li>
+      <li><a href="./about.html">О нас </a></li>
     </ul>
     <div class="blockAnim"></div>
   </div>
@@ -72,7 +73,7 @@
       </div>
     </div>
     <div class="grid-container">
-      <div class="grid-container__wrapper active">
+      <div class="grid-container__wrapper ">
         <div class="project">
           <a href="./project.html">
             <img src="./meida/bg1.png" alt="">
@@ -205,7 +206,7 @@
         </div>
         </div>
       </div>
-      <div class="grid-container__wrapper active">
+      <div class="grid-container__wrapper ">
         <div class="project">
           <a href="./project.html">
             <img src="./meida/bg1.png" alt="">
@@ -593,18 +594,59 @@
     let projextBlock = document.querySelectorAll('.grid-container__wrapper');
     let activeProjectIndex = 2;
     
-    function showNext () {
+    
+    nextBtn.onclick = ()=>{
+      nextBtn.classList.add('active')
+      setTimeout(showNext, 300);
+    };
+
+    if (window.innerWidth > 1000) {
+      projextBlock[0].classList.add('active')
+		  projextBlock[1].classList.add('active')
+      function showNext () {
       projextBlock.forEach(()=>{
         projextBlock[activeProjectIndex].classList.add('active');
         projextBlock[activeProjectIndex + 1].classList.add('active');
       })
       activeProjectIndex = activeProjectIndex + 2;
       nextBtn.classList.remove('active')
-      }
-    nextBtn.onclick = ()=>{
-      nextBtn.classList.add('active')
-      setTimeout(showNext, 300);
-    };</script>
+    }
+    } else {
+      projextBlock[0].classList.add('active')
+      function showNext () {
+      projextBlock.forEach(()=>{
+        projextBlock[activeProjectIndex].classList.add('active');
+      })
+      activeProjectIndex = activeProjectIndex + 1;
+      nextBtn.classList.remove('active')
+    }
+
+    }
+
+    
+//появление хедера
+
+let header = document.querySelector('header');
+header.classList.add('active')
+let last_scroll = 0;
+window.onscroll = function(){
+  if(window.scrollY > last_scroll){
+    header.classList.remove('active')
+  }else{
+    header.classList.add('active')
+  }
+  last_scroll = window.scrollY;
+  if(window.scrollY > 10) {
+    header.classList.add('bgTrue')
+  } else {
+    header.classList.remove('bgTrue')
+
+  }
+}
+
+
+    
+    </script>
 </body>
 
 </html>
