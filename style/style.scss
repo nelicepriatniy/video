@@ -14,6 +14,12 @@
     list-style: none;
 }
 
+a {
+    &.active {
+        color: #D9FF42
+    }
+}
+
 body::-webkit-scrollbar {
     display: none;            /* ширина scrollbar */
   }
@@ -274,13 +280,17 @@ body {
     }
 }
 
+.header__henu {
+    padding-top: 6px;
+}
+
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 0;
+    padding: 29px 0 35px 0;
     display: flex;
     flex-direction: column;
     z-index: 99;
@@ -423,6 +433,10 @@ li {
             opacity: 1;
             & a {
                 width: 100%;
+                &:last-child {
+                    height: 23px;
+
+                }
             }
         }
     }
@@ -457,13 +471,14 @@ li {
                 font-weight: 500;
                 font-size: 17px;
                 line-height: 135%;
+                width: 100%;
                 text-align: center;
                 text-transform: capitalize;
                 letter-spacing: -0.02em;
                 margin-bottom: 0;
                 transition: all .5s ease;
                 transition-delay: .4s;
-
+                height: 0px;
             }
         }
     }
