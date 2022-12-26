@@ -142,3 +142,13 @@ mobileMenuBtn.addEventListener('click', ()=>{
   mobileMenu.classList.toggle('active');
 })
 
+let whatPage = document.querySelector('main').getAttribute('data-p');
+let headerBtn = document.querySelectorAll('.headerBtn');
+
+if (!whatPage == null) {
+  headerBtn.forEach((el)=>{
+    if (el.getAttribute('id') == whatPage) {
+      el.classList.add('active')
+    }
+  })
+}

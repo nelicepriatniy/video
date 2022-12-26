@@ -412,14 +412,12 @@ li.active a {
   font-weight: 500;
   font-size: 17px;
   line-height: 135%;
-  width: 100%;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: -0.02em;
   margin-bottom: 0;
   transition: all 0.5s ease;
   transition-delay: 0.4s;
-  height: 0px;
 }
 .project .product__hover {
   transition: all 0.4s ease;
@@ -489,7 +487,7 @@ li.active a {
   display: flex;
   align-items: center;
   margin-top: 98px;
-  margin-bottom: 207px;
+  margin-bottom: 208px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -696,7 +694,7 @@ main {
 }
 
 .aboutTop {
-  margin-bottom: 204px;
+  margin-bottom: 197px;
   margin-top: 191px;
 }
 
@@ -713,6 +711,9 @@ main {
   width: 607px;
   color: #444444;
   margin-right: 50px;
+}
+.aboutTop__flex p:last-child {
+  margin-right: 0;
 }
 
 .aboutDeals__flex {
@@ -751,7 +752,7 @@ main {
 }
 
 .aboutAwards {
-  margin-bottom: 201px;
+  margin-bottom: 197px;
 }
 
 .awards__flex {
@@ -763,7 +764,14 @@ main {
   padding-top: 24px;
   margin-bottom: 52px;
 }
+.awards__flex:last-child {
+  margin-bottom: 0;
+}
 
+.awards__flex__item {
+  display: flex;
+  align-items: flex-end;
+}
 .awards__flex__item p {
   font-family: "Montserrat";
   font-style: normal;
@@ -780,7 +788,6 @@ main {
   font-style: normal;
   font-weight: 600;
   font-size: 26px;
-  line-height: 130%;
 }
 .awards__flex__item:last-child {
   left: 1134px;
@@ -1026,7 +1033,6 @@ main {
     height: 77px;
   }
   .awards__flex__item {
-    position: absolute;
     left: 489px;
   }
   .awards__flex__item:last-child {
@@ -1069,6 +1075,10 @@ main {
   }
 }
 @media (max-width: 999px) {
+  .btnNextBlock {
+    margin-bottom: 168px;
+    margin-top: 80px;
+  }
   .bg {
     scale: 1;
     height: 100%;
@@ -1087,7 +1097,7 @@ main {
     display: block;
   }
   .container {
-    margin-left: 10px;
+    margin-left: 11px;
     width: calc(100vw - 40px);
   }
   .logo {
@@ -1136,15 +1146,18 @@ main {
     top: 0px;
     left: 0px;
     transition: all 0.8s ease;
-    transform: translateY(-100vh);
     z-index: 10;
     width: 100vw;
-    height: 100vh;
+    height: 0;
     overflow: hidden;
+    transition-delay: 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .header__henu a {
+    font-size: 29px;
   }
   .header__henu .blockAnim {
     position: absolute;
@@ -1159,7 +1172,9 @@ main {
     transform: translate(50%, -50%);
   }
   .header__henu.active {
+    transition-delay: 0s;
     transform: translateX(0vh);
+    height: 100vh;
   }
   .header__henu.active .blockAnim {
     width: 300vh;
@@ -1167,13 +1182,15 @@ main {
   }
   .header__henu.active ul {
     opacity: 1;
+    transition: opacity 0.9s ease;
+    transition-delay: 0.7s;
   }
   .header__henu ul {
     position: relative;
-    transition: opacity 0.9s ease;
-    transition-delay: 0.7s;
     z-index: 3;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    transition-delay: 0.2s;
   }
   .header__henu li {
     font-family: "Benzin-ExtraBold";
@@ -1235,6 +1252,7 @@ main {
   }
   .topText li {
     font-size: 17px;
+    margin-bottom: 5px;
   }
   .project__item {
     height: 178px;
@@ -1281,7 +1299,13 @@ main {
   .aboutDeals__flex__item ul {
     font-size: 17px;
   }
+  .awards__flex {
+    height: 112px;
+    margin-bottom: 90px;
+  }
   .awards__flex__item {
+    top: 24px;
+    position: absolute;
     left: 310px;
   }
   .awards__flex__item:last-child {
@@ -1367,20 +1391,23 @@ main {
     margin-top: 177px;
   }
   .nameab {
-    font-size: 29px;
+    font-size: 37px;
     line-height: 140%;
     word-wrap: break-word;
     margin-bottom: 67px;
   }
   .awards__flex {
-    margin-bottom: 160px;
+    margin-bottom: 85px;
+    grid-template-columns: 1fr;
   }
   .awards__flex__item {
     left: 0;
     top: 95px;
+    margin-bottom: 10px;
   }
   .awards__flex__item:last-child {
     left: 0;
+    margin-bottom: 0;
     top: 127px;
   }
   .awards__flex__item:last-child p {
@@ -1388,6 +1415,7 @@ main {
   }
   .awards__flex__item:first-child {
     top: 36px;
+    margin-bottom: 30px;
   }
   .videoslider .thisVideo::after {
     height: 72px;
@@ -1410,5 +1438,12 @@ main {
   }
   .clients__wraper__item img {
     height: 110px;
+  }
+  footer a {
+    margin-bottom: 9px;
+    position: relative;
+  }
+  footer a:last-child {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=style.css.map */

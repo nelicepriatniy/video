@@ -471,14 +471,12 @@ li {
                 font-weight: 500;
                 font-size: 17px;
                 line-height: 135%;
-                width: 100%;
                 text-align: center;
                 text-transform: capitalize;
                 letter-spacing: -0.02em;
                 margin-bottom: 0;
                 transition: all .5s ease;
                 transition-delay: .4s;
-                height: 0px;
             }
         }
     }
@@ -557,7 +555,7 @@ li {
     display: flex;
     align-items: center;
     margin-top: 98px;
-    margin-bottom: 207px;
+    margin-bottom: 208px;
     width: fit-content;
     &:hover {
         cursor: pointer;
@@ -772,7 +770,7 @@ main {
 }
 
 .aboutTop {
-    margin-bottom: 204px;
+    margin-bottom: 197px;
     margin-top: 191px;
 }
 
@@ -789,6 +787,9 @@ main {
         width: 607px;
         color: #444444;
         margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
 
     }
 }
@@ -828,7 +829,7 @@ main {
 }
 
 .aboutAwards {
-    margin-bottom: 201px;
+    margin-bottom: 197px;
 }
 
 .awards__flex {
@@ -839,10 +840,17 @@ main {
     border-top: 1px solid #333333;
     padding-top: 24px;
     margin-bottom: 52px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 
 }
 
 .awards__flex__item {
+    display: flex;
+    align-items: flex-end;
+    &:nth-child(2) {
+    }
 
     & p {
         font-family: 'Montserrat';
@@ -861,7 +869,6 @@ main {
             font-style: normal;
             font-weight: 600;
             font-size: 26px;
-            line-height: 130%;
         }
     }
 
@@ -1157,7 +1164,6 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .awards__flex__item {
-        position: absolute;
         left: 489px;
     }
 
@@ -1219,6 +1225,11 @@ $remsize:  calc(100vw / 1600px * 10);
 
 @media (max-width: 999px) {
 
+    .btnNextBlock {
+        margin-bottom: 168px;
+        margin-top: 80px;
+    } 
+
     .bg {
         scale: 1;
         height: 100%;
@@ -1242,7 +1253,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .container {
-        margin-left: 10px;
+        margin-left: 11px;
         width: calc(100vw - 40px);
     }
 
@@ -1301,11 +1312,14 @@ $remsize:  calc(100vw / 1600px * 10);
         top: 0px;
         left: 0px;
         transition: all .8s ease;
-        transform: translateY(-100vh);
         z-index: 10;
         width: 100vw;
-        height: 100vh;
+        height: 0;
         overflow: hidden;
+        transition-delay: 1s;
+        & a {
+            font-size: 29px;
+        }
 
         & .blockAnim {
             position: absolute;
@@ -1321,7 +1335,9 @@ $remsize:  calc(100vw / 1600px * 10);
         }
 
         &.active {
-            transform: translateX(00vh);
+            transition-delay: 0s;
+            transform: translateX(0vh);
+            height: 100vh;
 
             & .blockAnim {
                 width: 300vh;
@@ -1330,6 +1346,8 @@ $remsize:  calc(100vw / 1600px * 10);
 
             & ul {
                 opacity: 1;
+                transition: opacity .9s ease;
+                transition-delay: .7s;
             }
         }
 
@@ -1340,10 +1358,10 @@ $remsize:  calc(100vw / 1600px * 10);
 
         & ul {
             position: relative;
-            transition: opacity .9s ease;
-            transition-delay: .7s;
             z-index: 3;
             opacity: 0;
+            transition: opacity .3s ease;
+            transition-delay: .2s;
         }
 
         & li {
@@ -1423,6 +1441,7 @@ $remsize:  calc(100vw / 1600px * 10);
 
         & li {
             font-size: 17px;
+            margin-bottom: 5px;
         }
     }
 
@@ -1487,7 +1506,14 @@ $remsize:  calc(100vw / 1600px * 10);
         }
     }
 
+    .awards__flex {
+        height: 112px;
+        margin-bottom: 90px;
+    }
+
     .awards__flex__item {
+        top: 24px;
+        position: absolute;
         left: 310px;
         &:last-child {
             left: 310px;
@@ -1604,7 +1630,7 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .nameab {
-        font-size: 29px;
+        font-size: 37px;
         line-height: 140%;
         word-wrap: break-word;
         margin-bottom: 67px;
@@ -1612,14 +1638,17 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .awards__flex {
-        margin-bottom: 160px;
+        margin-bottom: 85px;
+        grid-template-columns: 1fr;
     }
 
     .awards__flex__item {
         left: 0;
         top: 95px;
+        margin-bottom: 10px;
         &:last-child {
             left: 0;
+            margin-bottom: 0;
             top: 127px;
             & p {
                 left: 0;
@@ -1627,6 +1656,7 @@ $remsize:  calc(100vw / 1600px * 10);
         }
         &:first-child {
             top: 36px;
+            margin-bottom: 30px;
         }
     }
 
@@ -1657,6 +1687,16 @@ $remsize:  calc(100vw / 1600px * 10);
         }
         & img {
             height: 110px;
+        }
+    }
+
+    footer {
+        a {
+            margin-bottom: 9px;
+            position: relative;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
