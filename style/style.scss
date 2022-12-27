@@ -1020,16 +1020,25 @@ main {
     right: 0px;
 }
 
+.thisWraper {
+    align-items: center !important;
+    &.swiper-slide {
+        height: 100px !important;
+    }
+}
+
 .videoslider {
     & .thisVideo {
         position: relative;
-        margin: 0 7px;
         overflow: visible;
         aspect-ratio: 16 / 9;
         width: 234px;
+        margin: 0 12px 0 9px !important;
 
         & img {
             position: absolute;
+            width: 100%;
+            aspect-ratio: 16 / 9;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -1038,12 +1047,10 @@ main {
             box-sizing: border-box;
             content: '';
             display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 137px;
-            width: 234px;
+            position: relative;
+            height: 110%;
+            width: 106%;
+            z-index: 3;
             border: 2px #D9FF42 solid;
         }
     }
@@ -1159,10 +1166,6 @@ $remsize:  calc(100vw / 1600px * 10);
         height: 279px;
     }
 
-    .videobg {
-        height: 77px;
-    }
-
     .awards__flex__item {
         left: 489px;
     }
@@ -1180,8 +1183,8 @@ $remsize:  calc(100vw / 1600px * 10);
     .videoslider {
         & .thisVideo {
             &::after {
-                height: 87px;
-                width: 149px;
+                height: 130%;
+                width: 110%;
             }
         }
     }
@@ -1464,9 +1467,6 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
 
-    .videobg {
-        height: 68px;
-    }
 
     .nameab {
         font-size: 37px;
@@ -1533,10 +1533,12 @@ $remsize:  calc(100vw / 1600px * 10);
     .videoslider {
         & .thisVideo {
             &::after {
-                height: 80px;
-                width: 130px;
             }
         }
+    }
+
+    .videobg {
+        aspect-ratio: 16 / 9;
     }
 
     .aboutDeals__flex {
@@ -1610,7 +1612,6 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 
     .videobg {
-        height: 63px;
     }
 
     .swiper-button-next,
@@ -1663,8 +1664,6 @@ $remsize:  calc(100vw / 1600px * 10);
     .videoslider {
         & .thisVideo {
             &::after {
-                height: 72px;
-                width: 122px;
             }
         }
     }

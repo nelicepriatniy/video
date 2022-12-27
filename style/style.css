@@ -916,15 +916,24 @@ main {
   right: 0px;
 }
 
+.thisWraper {
+  align-items: center !important;
+}
+.thisWraper.swiper-slide {
+  height: 100px !important;
+}
+
 .videoslider .thisVideo {
   position: relative;
-  margin: 0 7px;
   overflow: visible;
   aspect-ratio: 16/9;
   width: 234px;
+  margin: 0 12px 0 9px !important;
 }
 .videoslider .thisVideo img {
   position: absolute;
+  width: 100%;
+  aspect-ratio: 16/9;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -932,12 +941,10 @@ main {
   box-sizing: border-box;
   content: "";
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 137px;
-  width: 234px;
+  position: relative;
+  height: 110%;
+  width: 106%;
+  z-index: 3;
   border: 2px #D9FF42 solid;
 }
 
@@ -1029,9 +1036,6 @@ main {
   .project__item {
     height: 279px;
   }
-  .videobg {
-    height: 77px;
-  }
   .awards__flex__item {
     left: 489px;
   }
@@ -1043,8 +1047,8 @@ main {
     margin-bottom: 121px;
   }
   .videoslider .thisVideo::after {
-    height: 87px;
-    width: 149px;
+    height: 130%;
+    width: 110%;
   }
   .clients__wraper__item {
     width: 25%;
@@ -1263,9 +1267,6 @@ main {
   footer a {
     margin-right: 35px;
   }
-  .videobg {
-    height: 68px;
-  }
   .nameab {
     font-size: 37px;
     line-height: 120%;
@@ -1317,9 +1318,8 @@ main {
   .item__name {
     font-size: 17px;
   }
-  .videoslider .thisVideo::after {
-    height: 80px;
-    width: 130px;
+  .videobg {
+    aspect-ratio: 16/9;
   }
   .aboutDeals__flex {
     grid-template-columns: repeat(2, 1fr);
@@ -1374,9 +1374,6 @@ main {
   .progectGrid {
     grid-template-columns: 1fr;
   }
-  .videobg {
-    height: 63px;
-  }
   .swiper-button-next,
 .swiper-button-prev {
     font-size: 12px;
@@ -1416,10 +1413,6 @@ main {
   .awards__flex__item:first-child {
     top: 36px;
     margin-bottom: 30px;
-  }
-  .videoslider .thisVideo::after {
-    height: 72px;
-    width: 122px;
   }
   .clients__wraper__item {
     width: 50%;

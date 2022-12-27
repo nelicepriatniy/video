@@ -82,6 +82,7 @@ const videoslider = new Swiper('.videoslider', {
   speed: 400,
   swipeHandler: 'body',
   slidesPerView: "auto",
+  autoHeight: true,
   spaceBetween: 3,
   navigation: {
     nextEl: '.swiper-button-next',
