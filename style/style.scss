@@ -396,7 +396,11 @@ li {
 .project {
     overflow: hidden;
     position: relative;
-
+    & a {
+        top: 0;
+        position: absolute;
+        height: 100%;
+    }
     & img {
         object-fit: cover;
         width: 100%;
@@ -1329,7 +1333,7 @@ $remsize:  calc(100vw / 1600px * 10);
             top: 0;
             right: 0;
             background: black;
-            transition: all 2s ease;
+            transition: all 1s ease;
             opacity: .9;
             width: 1px;
             height: 1px;
@@ -1341,6 +1345,7 @@ $remsize:  calc(100vw / 1600px * 10);
             transition-delay: 0s;
             transform: translateX(0vh);
             height: 100vh;
+            transition: all .1s ease;
 
             & .blockAnim {
                 width: 300vh;
@@ -1350,7 +1355,7 @@ $remsize:  calc(100vw / 1600px * 10);
             & ul {
                 opacity: 1;
                 transition: opacity .9s ease;
-                transition-delay: .7s;
+                transition-delay: .2s;
             }
         }
 
@@ -1364,7 +1369,7 @@ $remsize:  calc(100vw / 1600px * 10);
             z-index: 3;
             opacity: 0;
             transition: opacity .3s ease;
-            transition-delay: .2s;
+            transition-delay: .1s;
         }
 
         & li {
@@ -1635,12 +1640,20 @@ $remsize:  calc(100vw / 1600px * 10);
         line-height: 140%;
         word-wrap: break-word;
         margin-bottom: 67px;
+        &:first-child {
+            font-size: 29px;
+        }
 
     }
 
     .awards__flex {
         margin-bottom: 85px;
         grid-template-columns: 1fr;
+        height: 166px;
+    }
+
+    .nag {
+        margin-bottom: 82px;
     }
 
     .awards__flex__item {
@@ -1698,4 +1711,5 @@ $remsize:  calc(100vw / 1600px * 10);
             }
         }
     }
+
 }

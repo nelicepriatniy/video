@@ -592,7 +592,6 @@
     
     let nextBtn = document.querySelector('.btnNextBlock');
     let projextBlock = document.querySelectorAll('.grid-container__wrapper');
-    let activeProjectIndex = 2;
     
     
     nextBtn.onclick = ()=>{
@@ -601,6 +600,7 @@
     };
 
     if (window.innerWidth > 1000) {
+    let activeProjectIndex = 2;
       projextBlock[0].classList.add('active')
 		  projextBlock[1].classList.add('active')
       function showNext () {
@@ -612,12 +612,13 @@
       nextBtn.classList.remove('active')
     }
     } else {
+    let activeProjectIndex = 1;
       projextBlock[0].classList.add('active')
       function showNext () {
       projextBlock.forEach(()=>{
         projextBlock[activeProjectIndex].classList.add('active');
       })
-      activeProjectIndex = activeProjectIndex + 1;
+      activeProjectIndex ++;
       nextBtn.classList.remove('active')
     }
 
