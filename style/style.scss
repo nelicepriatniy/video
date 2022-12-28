@@ -106,6 +106,9 @@ body {
     width: calc(100vw - 120px);
     height: 100%;
     margin-left: 60px;
+    &.rela {
+        position: relative;
+    }
 }
 
 .swiper-slide {
@@ -395,12 +398,8 @@ li {
 
 .project {
     overflow: hidden;
+    
     position: relative;
-    & a {
-        top: 0;
-        position: absolute;
-        height: 100%;
-    }
     & img {
         object-fit: cover;
         width: 100%;
@@ -1062,7 +1061,9 @@ main {
 
 $remsize:  calc(100vw / 1600px * 10);
 
-
+.swiper-slide {
+    transition: all .4s ease;
+}
 
 .thisWraper {
     align-items: center;
@@ -1073,7 +1074,35 @@ $remsize:  calc(100vw / 1600px * 10);
 }
 
 .videobg {
-    width: 100%;
+    width: 100%; 
+    &.right {
+    }
+    &.left {
+        -webkit-mask-image: linear-gradient(to left, transparent 5%, black 100%);
+        mask-image: linear-gradient(to left, transparent 5%, black 100%);
+
+    }
+}
+
+
+.videoWraper {
+    -webkit-mask-image: linear-gradient(270deg, rgba(217, 217, 217, 0) 0%, #D9D9D9 17.19%, #D9D9D9 52.6%, #D9D9D9 80.21%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(270deg, rgba(217, 217, 217, 0) 0%, #D9D9D9 17.19%, #D9D9D9 52.6%, #D9D9D9 80.21%, rgba(217, 217, 217, 0) 100%);
+
+}
+
+.thisWraper {
+    .swiper-slide-visible{
+    }
+    
+}
+.swiper-slide-visible {
+    &:first-child {
+        height: 3000px;
+        -webkit-mask-image: linear-gradient(to right, transparent 5%, black 100%);
+        mask-image: linear-gradient(to right, transparent 5%, black 100%);
+
+    }
 }
 
 .swiper-button-next,
@@ -1081,6 +1110,17 @@ $remsize:  calc(100vw / 1600px * 10);
     color: white !important;
 }
 
+.swiper-button-next {
+    right: 0;
+    left: auto;
+}
+
+
+.rel {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+}
 
 .vjs-has-started .vjs-control-bar,
 .vjs-audio-only-mode .vjs-control-bar {
@@ -1091,7 +1131,7 @@ $remsize:  calc(100vw / 1600px * 10);
     height: 20px;
     width: 20px;
     position: absolute;
-    top: 60px;
+    top: calc(86px + 36px);
     right: 60px;
     cursor: pointer;
 
@@ -1134,7 +1174,53 @@ $remsize:  calc(100vw / 1600px * 10);
     }
 }
 
+.vjs-icon-fullscreen-enter:before, .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
+    content: url(./../meida/video/pleer/allWindow.svg);
+}
+
+.video__name {
+    height: 100vh;
+    position: absolute;
+}
+
+.video__name__text {
+    position: absolute;
+    bottom: 30px;
+    margin-bottom: 52px;
+    z-index: 99;
+    & p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 135%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        margin-bottom: 8px;
+        opacity: 0.4;
+    }
+    & h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 130%;
+        /* identical to box height, or 34px */
+        
+        letter-spacing: -0.02em;
+        
+        /* Белый */
+        
+        color: #FFFFFF;
+    }
+}
+
 @media (max-width: 1400px) {
+
+    .vjs-has-started .vjs-control-bar, .vjs-audio-only-mode .vjs-control-bar {
+        
+    width: calc(100vw - 105px);
+    }
 
     .container {
         width: calc(100vw - 120px);
@@ -1227,10 +1313,35 @@ $remsize:  calc(100vw / 1600px * 10);
             height: 110px;
         }
     }
+    .closeBtn {
+        top: calc(36px + 86px);
+        right: 30px;
+    }
 
 }
 
 @media (max-width: 999px) {
+
+    .vjs-has-started .vjs-control-bar {
+        width: calc(100vw - 22px);
+
+    }
+
+    .video-js .vjs-play-control {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .video__name__text {
+        margin-bottom: 38px;
+        & p {
+            font-size: 17px;
+            margin-bottom: 2px;
+        }
+        & h3 {
+            font-size: 22px; 
+        }
+    }
 
     .btnNextBlock {
         margin-bottom: 168px;
@@ -1594,9 +1705,26 @@ $remsize:  calc(100vw / 1600px * 10);
         }
     }
 
+
+    .closeBtn {
+        top: 114px;
+        right: 22px;
+    }
 }
 
 @media (max-width: 639px) {
+
+    .closeBtn {
+        top: 114px;
+        right: 10 px;
+    }
+
+    
+
+    .vjs-has-started .vjs-control-bar {
+        width: calc(100vw - 3px);
+
+    }
     .aboutDeals__flex {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1616,8 +1744,19 @@ $remsize:  calc(100vw / 1600px * 10);
         grid-template-columns: 1fr;
     }
 
-    .videobg {
+ 
+.videobg {
+    width: 100%; 
+    &.right {
+        -webkit-mask-image: linear-gradient(to right, transparent 5%, black 100%);
+        mask-image: linear-gradient(to right, transparent 5%, black 100%);
     }
+    &.left {
+        -webkit-mask-image: linear-gradient(to left, transparent 5%, black 100%);
+        mask-image: linear-gradient(to left, transparent 5%, black 100%);
+
+    }
+}
 
     .swiper-button-next,
     .swiper-button-prev {

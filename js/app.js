@@ -82,7 +82,7 @@ const videoslider = new Swiper('.videoslider', {
   speed: 400,
   swipeHandler: 'body',
   slidesPerView: "auto",
-  autoHeight: true,
+  watchSlidesProgress: true,
   spaceBetween: 3,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -153,3 +153,21 @@ if (!whatPage == null) {
     }
   })
 }
+
+// let bgimg = document.querySelectorAll('.videobg');
+// let bgimgslide = document.querySelectorAll('.bg-slide');
+// let numOfActiveSlide = '123';
+// document.addEventListener('click', ()=>{
+//   bgimgslide.forEach((el, i)=>{
+//     el.classList.remove('right');
+//     el.classList.remove('left');
+//     if(el.classList.contains('swiper-slide-active')){
+//       numOfActiveSlide = i;
+//     }
+
+//     el[numOfActiveSlide + 3].classList.add('right')
+//     el[numOfActiveSlide - 3].classList.add('left')
+//   })
+//   console.log(numOfActiveSlide)
+  
+// })
