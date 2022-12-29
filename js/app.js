@@ -154,6 +154,8 @@ if (!whatPage == null) {
   })
 }
 
+
+
 // let bgimg = document.querySelectorAll('.videobg');
 // let bgimgslide = document.querySelectorAll('.bg-slide');
 // let numOfActiveSlide = '123';
