@@ -1003,7 +1003,7 @@ main {
 }
 
 .video-js .vjs-slider {
-    background: #bdbdbd;
+    background: #FFFFFF;
 
 }
 
@@ -1012,7 +1012,12 @@ main {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    height: 15px;
+    height: 15px !important;
+    width: auto !important;
+}
+
+.vjs-icon-placeholder {
+    width: fit-content;
 }
 
 .video-js .vjs-mute-control:hover {
@@ -1067,6 +1072,23 @@ main {
     bottom: 59px;
     margin-bottom: 52px;
     right: 0px;
+    width: fit-content;
+}
+
+.swiper-button-prev{
+    left: 0 !important;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0 !important;
+}
+
+.vjs-time-divider {
+    display: none !important;
+}
+
+.vjs-button > .vjs-icon-placeholder:before {
+    font-size: 2em;
 }
 
 .thisWraper {
